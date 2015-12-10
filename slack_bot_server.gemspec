@@ -19,7 +19,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "slack-api", :git => "https://github.com/LucasCioffi/slack-ruby-gem"
+  #spec.add_dependency "slack-api", "~> 1.1" #
+    #slack-bot-server (>= 0) ruby depends on
+    #slack-api (>= 1.1) ruby depends on
+    #faye-websocket (~> 0.9.2) ruby
+  
+    #slack-ruby-client (>= 0) ruby depends on
+    #faye-websocket (0.10.1)
+  #spec.add_dependency "slack-api", :git => "https://github.com/LucasCioffi/slack-ruby-gem" #this format doesn't work
   spec.add_dependency "multi_json"
 
   spec.add_development_dependency "bundler", "~> 1.10"
